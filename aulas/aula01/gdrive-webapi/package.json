@@ -1,0 +1,15 @@
+{
+  "name": "@michaelhenrique/gdrive-webapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "michaelhenrique",
+  "license": "ISC",
+  "dependencies": {}
+}

@@ -8,6 +8,22 @@ import {
 import Routes from './../../src/routes'
 
 describe('#Routes suite test', () => {
+    const defaultParams = {
+        request: {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            },
+            method: '',
+            body: {}
+        },
+        response: {
+            setHeader: jest.fn(),
+            writeHead: jest.fn(),
+            end: jest.fn()
+        },
+        values: () => Object.values(defaultParams)
+    }
+
     describe('#setSockectInstance', () => {
         test('setSocket shoud store io instance', () => {
             const routes = new Routes()
@@ -23,22 +39,6 @@ describe('#Routes suite test', () => {
     })
     
     describe('#handler', () => {
-        const defaultParams = {
-            request: {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                },
-                method: '',
-                body: {}
-            },
-            response: {
-                setHeader: jest.fn(),
-                writeHead: jest.fn(),
-                end: jest.fn()
-            },
-            values: () => Object.values(defaultParams)
-        }
-
         test('given an inexistent route it shoud choose default route', async () => {
             const routes = new Routes()
             const params = {
@@ -97,6 +97,30 @@ describe('#Routes suite test', () => {
 
             await routes.handler(...params.values())
             expect(routes.get).toHaveBeenCalled()
+        })
+    })
+
+    describe('#get', () => {
+        test('given method GET it should list all files downloaded', async () => {
+            const routes = new Routes()
+            const params = {
+                ...defaultParams
+            }
+
+            const filesStatusesMock = [{
+                size: '117 kB',
+                lastModified: '2021-09-21T01:01:21.024Z',
+                owner: 'james',
+                file: 'file.txt'
+            }]
+            jest.spyOn(routes.FileHelper, routes.FileHelper.getFilesStatus.name)
+                .mockResolvedValue(filesStatusesMock)
+            
+            params.request.method = 'GET'
+            await routes.handler(...params.values())
+
+            expect(params.response.writeHead).toHaveBeenCalledWith(200)
+            expect(params.response.end).toHaveBeenCalledWith(JSON.stringify(filesStatusesMock))
         })
     })
 })

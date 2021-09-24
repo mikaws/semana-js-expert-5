@@ -113,7 +113,7 @@ describe('#Routes suite test', () => {
                 owner: 'james',
                 file: 'file.txt'
             }]
-            jest.spyOn(routes.FileHelper, routes.FileHelper.getFilesStatus.name)
+            jest.spyOn(routes.fileHelper, routes.fileHelper.getFilesStatus.name)
                 .mockResolvedValue(filesStatusesMock)
             
             params.request.method = 'GET'

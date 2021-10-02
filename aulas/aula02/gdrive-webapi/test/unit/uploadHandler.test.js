@@ -166,7 +166,6 @@ describe('#UploadHandler test suite', () => {
             expect(ioObj.emit).toHaveBeenCalledTimes(expectedMessageSent)
 
             const [firstCallResult, secondCallResult] = ioObj.emit.mock.calls
-            console.log('ioObj.emit.mock.calls', ioObj.emit.mock.calls)
 
             expect(firstCallResult).toEqual([handler.ON_UPLOAD_EVENT, { processedAlready: "hello".length, filename}])
             expect(secondCallResult).toEqual([handler.ON_UPLOAD_EVENT, { processedAlready: messages.join("").length, filename}])

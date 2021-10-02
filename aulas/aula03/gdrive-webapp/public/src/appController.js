@@ -1,6 +1,7 @@
 export default class AppController {
-    constructor({ connectionManager }) {
+    constructor({ connectionManager, viewManager }) {
         this.connectionManager = connectionManager
+        this.viewManager = viewManager
     }
 
     async initialize() {
@@ -9,6 +10,6 @@ export default class AppController {
 
     async updateCurrentFiles(){
         const files = await this.connectionManager.currentFiles()
-        console.log({ files })
+        this.viewManager.updateCurrentFiles(files)
     }
 }

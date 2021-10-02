@@ -10,7 +10,7 @@ export default class UploadHandler {
         this.downloadsFolder = downloadsFolder
     }
 
-    handleFileBytes() {
+    handleFileBytes(filename) {
         
     }
 

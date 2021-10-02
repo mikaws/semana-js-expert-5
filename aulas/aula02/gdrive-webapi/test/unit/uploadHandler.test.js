@@ -6,7 +6,7 @@ import {
 } from '@jest/globals'
 import fs from 'fs'
 import { resolve } from 'path'
-import { pipeline } from 'stream'
+import { pipeline } from 'stream/promises'
 import UploadHandler from '../../src/uploadHandler'
 import TestUtil from '../_util/testUtil'
 import Routes from './../../src/routes'
@@ -14,7 +14,7 @@ import Routes from './../../src/routes'
 describe('#UploadHandler test suite', () => {
     const ioObj = {
         to: (id) => ioObj,
-        emit: (event, message) => {}
+        emit: (event, message) => { }
     }
 
     describe('#registerEvents', () => {

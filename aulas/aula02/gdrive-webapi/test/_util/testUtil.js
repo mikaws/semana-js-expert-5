@@ -25,6 +25,11 @@ export default class TestUtil {
     }
 
     static generateTransformStream(onData) {
+        // async function *(source){
+        //     for await(const chunk of data){
+        //          yield chunk
+        //     }
+        // }
         return new Transform ({
             objectMode: true,
             transform(chunk, encoding, cb) {

@@ -3,6 +3,9 @@ export default class ViewManager {
         this.tbody = document.getElementById('tbody')
         this.newFileBtn = document.getElementById('newFileBtn')
         this.fileElem = document.getElementById('fileElem')
+        this.progressModal = document.getElementById('progressModal')
+        this.progressBar = document.getElementById('progressBar')
+        this.output = document.getElementById('output')
 
         this.formatter = new Intl.DateTimeFormat('pt', {
             locale: 'pt-br',
@@ -12,6 +15,33 @@ export default class ViewManager {
             hour: '2-digit',
             minute: '2-digit'
         })
+
+        this.modalInstance = {}
+    }
+
+    configureModal() {
+        this.modalInstance = M.Modal.init(this.progressModal, {
+            opacity: 0,
+            dismissable: false,
+            // with this you can click the screen even if
+            // modal is opened
+            onOpenEnd() {
+                this.$overlay[0].remove()
+            }
+        })
+    }
+
+    openModal() {
+        this.modalInstance.open()
+    }
+
+    closeModal() {
+        this.modalInstance.close()
+    }
+
+    updateStatus(size) {
+        this.output.innerHTML = `Uploading in <b>${Math.floor(size)}%</b>`
+        this.progressBar.value = size
     }
 
     configureOnFileChange(fn) {

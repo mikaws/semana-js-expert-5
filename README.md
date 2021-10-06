@@ -26,13 +26,12 @@ Essa foi a quinta Semana Javascript Expert! Código feito por [Erick Wendel](htt
 ## Desafios pós projeto a finalizar
 
 1. _Backend_: Salvar o arquivo na AWS ou qualquer serviço de storage
-   - Nosso projeto hoje armazena arquivos em disco. o desafio é você via Stream, fazer upload para algum serviço na nuvem
-   - Como plus, manter 100% de code coverage, ou seja, crie testes para sua nova feature
+   - Nosso projeto hoje armazena arquivos em disco. O desafio é via Stream, fazer upload para algum serviço na nuvem
+   - Como plus, manter 100% de code coverage, ou seja, criar testes para a nova feature
 2. _Frontend_: Adicionar testes no frontend e alcançar 100% de code coverage
-   - Você aprendeu como fazer testes no backend. Usar o mesmo processo para criar testes unitários no frontend com Jest
-   - Caso tenha duvidas, acesse o [exemplo](https://github.com/ErickWendel/tdd-frontend-example) e deixe uma estrela!
+   - Usar o mesmo processo para criar testes unitários no frontend com Jest
 3. _Infraestrutura_: Publicar aplicação com seu SSL customizado em máquina virtual
-   - Você aprendeu a gerar SSL local, o desafio é você criar um certificado (pode ser com o _Let's Encrypt_) e adicionar na sua aplicação
+   - Criar um certificado (pode ser com o _Let's Encrypt_) e adicionar na aplicação
 
 ## Créditos ao Layout <3
 

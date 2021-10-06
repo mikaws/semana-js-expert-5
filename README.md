@@ -1,8 +1,6 @@
 # Google Drive Clone - Semana JS Expert 5.0
 
-Seja bem vindo(a) à quinta Semana Javascript Expert. Este é o código inicial para iniciar nossa jornada.
-
-Marque esse projeto com uma estrela 🌟
+Essa foi a quinta Semana Javascript Expert! Código feito por [Erick Wendel](https://github.com/ErickWendel) e refeito por mim durante as aulas da Semana Javascript Expert.
 
 ## Preview
 
@@ -25,22 +23,15 @@ Marque esse projeto com uma estrela 🌟
   - [x] Deve exibir progresso de upload
   - [x] Deve ter função de upload via drag and drop
 
-## Desafios para alunos pós projeto
+## Desafios pós projeto a finalizar
 
 1. _Backend_: Salvar o arquivo na AWS ou qualquer serviço de storage
-   - Nosso projeto hoje armazena arquivos em disco. o desafio é você via Stream, fazer upload para algum serviço na nuvem
-   - Como plus, manter 100% de code coverage, ou seja, crie testes para sua nova feature
+   - Nosso projeto hoje armazena arquivos em disco. O desafio é via Stream, fazer upload para algum serviço na nuvem
+   - Como plus, manter 100% de code coverage, ou seja, criar testes para a nova feature
 2. _Frontend_: Adicionar testes no frontend e alcançar 100% de code coverage
-   - Você aprendeu como fazer testes no backend. Usar o mesmo processo para criar testes unitários no frontend com Jest
-   - Caso tenha duvidas, acesse o [exemplo](https://github.com/ErickWendel/tdd-frontend-example) e deixe uma estrela!
+   - Usar o mesmo processo para criar testes unitários no frontend com Jest
 3. _Infraestrutura_: Publicar aplicação com seu SSL customizado em máquina virtual
-   - Você aprendeu a gerar SSL local, o desafio é você criar um certificado (pode ser com o _Let's Encrypt_) e adicionar na sua aplicação
-
-### Considerações
-
-- Tire suas dúvidas sobre os desafios em nossa comunidade, o objetivo é você aprender de forma divertida. Surgiu dúvidas? Pergunte por lá!
-
-- Ao completar qualquer um dos desafios, envie no canal **#desafios** da comunidade no **Discord**
+   - Criar um certificado (pode ser com o _Let's Encrypt_) e adicionar na aplicação
 
 ## Créditos ao Layout <3
 
